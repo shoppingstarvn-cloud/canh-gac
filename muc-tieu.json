@@ -1,0 +1,17 @@
+[
+  { "ten": "trithuc.pro.vn (Tải Sản Phẩm Số)", "url": "https://trithuc.pro.vn", "dat": [200] },
+  { "ten": "tailieu.shopmartai.com", "url": "https://tailieu.shopmartai.com", "dat": [200] },
+  { "ten": "Kalin", "url": "https://kalin.trithuc.pro.vn/api/rt", "dat": [200], "chua": "\"ws\"" },
+  { "ten": "shopmartai.com (trang chủ)", "url": "https://shopmartai.com", "dat": [200] },
+  { "ten": "ShopMartAI Marketing (giao diện)", "url": "https://marketing.shopmartai.com", "dat": [200] },
+  { "ten": "ShopMartAI Marketing (máy chủ API)", "url": "https://app-quet-marketing-tienhoa-ddi7.vercel.app/api/licensing/plans", "dat": [200] },
+  { "ten": "BĐS Em Phương", "url": "https://bds.shopmartai.com", "dat": [200] },
+  { "ten": "Ngọc Linh", "url": "https://ngoclinh.shopmartai.com", "dat": [200] },
+  { "ten": "Truyền cảm hứng toán", "url": "https://truyencamhungtoan.shopmartai.com", "dat": [200] },
+  { "ten": "Bê tông", "url": "https://betong.shopmartai.com", "dat": [200] },
+  { "ten": "Nghị quyết 57", "url": "https://nghiquyet57.shopmartai.com", "dat": [200] },
+  { "ten": "Supabase bfruxinvvvaqufghtigw", "url": "https://bfruxinvvvaqufghtigw.supabase.co/auth/v1/health", "dat": [200, 401] },
+  { "ten": "Supabase vvzshpzmutidkfnattnz (marketing)", "url": "https://vvzshpzmutidkfnattnz.supabase.co/auth/v1/health", "dat": [200, 401] },
+  { "ten": "Supabase mkbwnqdmnqjljnbjbetk (BĐS)", "url": "https://mkbwnqdmnqjljnbjbetk.supabase.co/auth/v1/health", "dat": [200, 401] },
+  { "ten": "Supabase pglbhoitmcflpvoasewr (Ngọc Linh)", "url": "https://pglbhoitmcflpvoasewr.supabase.co/auth/v1/health", "dat": [200, 401] }
+]

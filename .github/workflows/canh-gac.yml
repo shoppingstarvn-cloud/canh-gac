@@ -1,0 +1,36 @@
+name: Canh gác 24/7
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'     # mỗi 5 phút (GitHub có thể trễ vài phút lúc cao điểm)
+    - cron: '17 3 1 * *'      # ngày 1 hằng tháng: ghi nhịp tim để GitHub không tự tắt lịch
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: canh-gac
+  cancel-in-progress: false
+
+jobs:
+  kiem-tra:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Kiểm tra mọi web và database
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node kiem-tra.mjs
+      - name: Lưu trạng thái (chỉ khi đổi) và nhịp tim hằng tháng
+        run: |
+          if [ "${{ github.event.schedule }}" = "17 3 1 * *" ]; then date -u +%FT%TZ > nhip-tim.txt; fi
+          git config user.name "canh-gac"
+          git config user.email "canh-gac@users.noreply.github.com"
+          git add trang-thai.json nhip-tim.txt 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Cập nhật trạng thái" && git push)
